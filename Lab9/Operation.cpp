@@ -77,7 +77,7 @@ Division::Division(int n) : Operation{ n, "Division" } {}
 double Division::Result(double* arg) const {
 	double result{ arg[0] };
 	for (int i = 1; i < n; ++i) {
-		if (arg[i] == 0) throw new DivisionByZero(i);
+		if (arg[i] == 0) throw DivisionByZero(i);
 		result /= arg[i];
 	}
 	return result;
